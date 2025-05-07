@@ -1,0 +1,85 @@
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Home</title>
+        <link rel="stylesheet" href="Style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+
+            <header class="header"> 
+                <img src="imagis/logo.png" alt="Nuvola Logo" class="logo" width="80px" height="80px">
+    
+                <nav class="menu">
+                    <ul>
+                        <li> <a href="index.html"> Home </a> </li>
+                        <li> <a href="acqua.html"> Acqua </a> </li>
+                        <li> <a href="terme.html"> Terme </a> </li>
+                        <li> <a href="outdoor.html"> Outdoor </a> </li>
+                        <li> <a href="fitness.html"> Fitness </a> </li>
+                        <li> <a href="calcietto.html"> Calcietto </a> </li>
+                    </ul>
+                </nav>
+                <a href="prova gratuita.html" class="menu_button"> Prova Gratuita </a>
+    
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+    
+            </header>
+
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <strong>ATTENZIONE!</strong>
+                <p>Questo sito è un test scolastico, <a href="https://cavenago.nuvolavillage.it/home">premi qui</a> 
+                    per accedere al sito ufficiale di Nuvola Sport NuvolaSportVillage Cavenago.</p>
+            </div>
+    
+            
+
+
+
+            
+        </div>
+        
+
+    </body>
+
+    <footer>
+        <p>
+            © Marcello Mapelli by Liceo Banfi -  All rights reserved | Questo sito è un test scolastico, <a href="https://cavenago.nuvolavillage.it/home">premi qui</a> 
+            per accedere al sito ufficiale di Nuvola Sport NuvolaSportVillage Cavenago.
+        </p>
+    </footer>
+
+    <script>
+        console.log("crash")
+
+        /* Premo Menu Su Telefono*/
+        let hamburger = document.querySelector('.hamburger');
+
+        hamburger.addEventListener("click", function(){
+            document.body.classList.toggle("open");
+        });
+
+        var close = document.getElementsByClassName("closebtn");
+        var i;
+        
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function(){
+            var div = this.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function(){ div.style.display = "none"; }, 600);
+            }
+        }
+
+    </script>
+</html>

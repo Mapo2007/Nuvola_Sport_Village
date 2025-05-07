@@ -1,0 +1,152 @@
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Home</title>
+        <link rel="stylesheet" href="Style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+
+            <header class="header"> 
+                <img src="imagis/logo.png" alt="Nuvola Logo" class="logo" width="80px" height="80px">
+    
+                <nav class="menu">
+                    <ul>
+                        <li> <a href="index.html"> Home </a> </li>
+                        <li> <a href="acqua.html"> Acqua </a> </li>
+                        <li> <a href="terme.html"> Terme </a> </li>
+                        <li> <a href="outdoor.html"> Outdoor </a> </li>
+                        <li> <a href="fitness.html"> Fitness </a> </li>
+                        <li> <a href="calcietto.html"> Calcietto </a> </li>
+                    </ul>
+                </nav>
+                <a href="prova gratuita.html" class="menu_button"> Prova Gratuita </a>
+    
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+    
+            </header>
+
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <strong>ATTENZIONE!</strong>
+                <p>Questo sito è un test scolastico, <a href="https://cavenago.nuvolavillage.it/home">premi qui</a> 
+                    per accedere al sito ufficiale di Nuvola Sport NuvolaSportVillage Cavenago.</p>
+            </div>
+
+
+
+            <div class="home">
+                <h1>Inizia con una giornata di prova GRATUITA. <br>Avrai modo di conoscere il club e tutti i servizi a disposizione, senza alcun impegno.</h1>
+                <p>Prenotati ora compilando l'apposito form, verrai subito ricontattato da un nostro esperto.</p>
+
+                
+                <div class="grid-center">
+                    <div class="col-50">
+                        <input class="form" type="text" id="nome" name="nome" placeholder="Nome*">
+                    </div>
+
+                    <div class="col-50">
+                        <input class="form" type="text" id="cognome" name="cognome" placeholder="Cognome*">
+                    </div>
+
+                    <div class="col-50">
+                        <input class="form" type="text" id="mail" name="mail" placeholder="E-Mail*">
+                    </div>
+
+                    <div class="col-50">
+                        <input class="form" type="text" id="Telefono" name="Telefono" placeholder="Telefono  ">
+                    </div>
+
+                    <div class="col-50">
+                        <select class="form" name="fascia-oraria" id="fascia-oraria">
+                            <option value="" disabled="" selected="">In quale fascia oraria vuoi essere contattato?</option>
+                            <option value="10-12">10.00 - 12.00</option>
+                            <option value="12-14">12.00 - 14.00</option>
+                            <option value="14-16">14.00 - 16.00</option>
+                            <option value="16-18">16.00 - 18.00</option>
+                            <option value="10-12">18.00 - 20.00</option>
+                            <option value="10-12">20.00 - 22.00</option>
+                        </select>
+                    </div>
+
+                    <div class="col-50">
+                        <select class="form" name="come-ci-hai-conosciuto" id="come-ci-hai-conosciuto">
+                            <option value="" disabled="" selected="">Come ci hai conosciuto?</option>
+                            <option value="Riviste / Giornali">Riviste / Giornali</option>
+                            <option value="Web">Web</option>
+                            <option value="Eventi">Eventi</option>
+                            <option value="Manifesti">Manifesti</option>
+                            <option value="Affissioni">Affissioni</option>
+                            <option value="Volantini">Volantini</option>
+                            <option value="Flyer">Flyer</option>
+                            <option value="Passaparola">Passaparola</option>
+                            <option value="Social Network">Social Network</option>
+                            <option value="Sono un ex socio">Sono un ex socio</option>
+                            <option value="altro">Altro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-100">
+                        <textarea type="text" class="form" placeholder="Note" id="note" value="" name="description"></textarea>
+                    </div>
+
+                    <button class="form-bt" type="button" onclick="">INVIA</button>
+
+                </div>
+
+
+                
+
+
+            </div>
+            
+
+
+
+            
+        </div>
+        
+
+    </body>
+
+    <footer>
+        <p>
+            © Marcello Mapelli by Liceo Banfi -  All rights reserved | Questo sito è un test scolastico, <a href="https://cavenago.nuvolavillage.it/home">premi qui</a> 
+            per accedere al sito ufficiale di Nuvola Sport NuvolaSportVillage Cavenago.
+        </p>
+    </footer>
+
+    <script>
+        console.log("crash")
+
+        /* Premo Menu Su Telefono*/
+        let hamburger = document.querySelector('.hamburger');
+
+        hamburger.addEventListener("click", function(){
+            document.body.classList.toggle("open");
+        });
+
+
+        var close = document.getElementsByClassName("closebtn");
+        var i;
+        
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function(){
+            var div = this.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function(){ div.style.display = "none"; }, 600);
+            }
+        }
+
+    </script>
+</html>
